@@ -1,0 +1,36 @@
+Longitud de una frase
+
+frase_usuario = input("Introduzca una palabra entre 4 y 8 letras: ")
+
+longitud_actual = len(frase_usuario)
+
+if longitud_actual > 8:
+    exceso = longitud_actual - 8
+    print(f"sobran letras. tienes {exceso} letras sobrantes.")
+    frase_usuario = frase_usuario[:8]
+elif longitud_actual < 4:
+    faltantes = 4 - longitud_actual
+    print(f"Hacen falta letras. falta {faltantes} letras.")
+    frase_usuario = frase_usuario.ljust(4)
+
+print(f"La palabra es correcta.")
+
+
+Encuentra el cuadrante
+
+
+x = float(input("Ingrese la coordenada x: "))
+y = float(input("Ingrese la coordenada y: "))
+
+if x > 0 and y > 0:
+    print("El punto se encuentra en el Cuadrante I.")
+elif x < 0 and y > 0:
+    print("El punto se encuentra en el Cuadrante II.")
+elif x < 0 and y < 0:
+    print("El punto se encuentra en el Cuadrante III.")
+elif x > 0 and y < 0:
+    print("El punto se encuentra en el Cuadrante IV.")
+elif x == 0 and y == 0:
+    print("El punto se encuentra en el origen.")
+else:
+    print("El punto se encuentra en el eje.")
